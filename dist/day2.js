@@ -7,11 +7,11 @@ let decryptedInput = gameInput;
 //   }
 //   return string
 // }
-decryptedInput = decryptedInput.replaceAll("B", "paper");
-decryptedInput = decryptedInput.replaceAll("C", "scissors");
-decryptedInput = decryptedInput.replaceAll("X", "lose");
-decryptedInput = decryptedInput.replaceAll("Y", "draw");
-decryptedInput = decryptedInput.replaceAll("Z", "win");
+decryptedInput = decryptedInput.replace(/B/g, "paper");
+decryptedInput = decryptedInput.replace(/C/g, "scissors");
+decryptedInput = decryptedInput.replace(/X/g, "lose");
+decryptedInput = decryptedInput.replace(/Y/g, "draw");
+decryptedInput = decryptedInput.replace(/Z/g, "win");
 const moves = ["rock", "paper", "scissors", "rock", "paper", "scissors"];
 const rounds = decryptedInput.split("\n").map((round) => {
     return { opponent: round.split(" ")[0], me: round.split(" ")[1] };
